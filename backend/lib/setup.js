@@ -2,6 +2,8 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
+const { logger } = require('../logger.js');
+
 
 const injectMiddlewares = (app) => {
   const allowedOrigins = process.env.ALLOWED_ORIGINS;
