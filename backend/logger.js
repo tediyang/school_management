@@ -27,7 +27,7 @@ const logger = createLogger({
   ]
 });
 
-if (process.env.APP_ENV !== 'production') {
+if (process.env.NODE_ENV !== 'production') {
   logger.add(new transports.Console({
     handleExceptions: true
   }));
