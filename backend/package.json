@@ -25,7 +25,11 @@
     "sequelize:migrate": "npx sequelize-cli db:migrate",
     "sequelize:undo": "npx sequelize-cli db:migrate:undo",
     "sequelize:seed": "npx sequelize-cli db:seed:all",
-    "sequelize:undo-seed": "npx sequelize-cli db:seed:undo:all"
+    "sequelize:undo-seed": "npx sequelize-cli db:seed:undo:all",
+    "deploy": "pm2 start server.js",
+    "stop": "pm2 stop server.js",
+    "monitor": "pm2 monitor",
+    "save": "pm2 save"
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -36,6 +40,7 @@
     "joi": "^17.13.3",
     "morgan": "^1.10.0",
     "mysql2": "^3.14.1",
+    "pm2": "^6.0.8",
     "sequelize": "^6.37.7",
     "winston": "^3.17.0"
   },
