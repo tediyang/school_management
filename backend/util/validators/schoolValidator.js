@@ -25,12 +25,11 @@ class SchoolValidator {
       .min(-90)
       .max(90)
       .messages({
-        'number.base': 'latitude must be a float.',
+        'number.base': 'latitude must be a number.',
         'number.empty': 'latitude is required.',
         'any.required': 'latitude is a required field.',
         'number.min': 'latitude must be >= -90.',
         'number.max': 'latitude must be <= 90.',
-        'number.precision': 'Latitude coordinate must have ≤6 decimal places',
       }),
     longitude: Joi
       .number()
@@ -44,7 +43,6 @@ class SchoolValidator {
         'any.required': 'longitude is a required field.',
         'number.min': 'longitude must be >= -180.',
         'number.max': 'longitude must be <= 180.',
-        'number.precision': 'Longitude coordinate must have ≤6 decimal places'
       }),
   });
 
@@ -56,12 +54,11 @@ class SchoolValidator {
       .min(-90)
       .max(90)
       .messages({
-        'number.base': 'latitude must be a float.',
+        'number.base': 'latitude must be a number.',
         'number.empty': 'latitude is required.',
         'any.required': 'latitude is a required field.',
         'number.min': 'latitude must be >= -90.',
         'number.max': 'latitude must be <= 90.',
-        'number.precision': 'Latitude coordinate must have ≤6 decimal places',
       }),
     longitude: Joi
       .number()
@@ -74,8 +71,7 @@ class SchoolValidator {
         'number.empty': 'longitude is required.',
         'any.required': 'longitude is a required field.',
         'number.min': 'longitude must be >= -180.',
-        'number.max': 'longitude must be <= 180.',
-        'number.precision': 'Longitude coordinate must have ≤6 decimal places'
+        'number.max': 'longitude must be <= 180.'
       }),
   });
 }
