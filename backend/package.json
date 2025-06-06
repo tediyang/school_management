@@ -19,7 +19,6 @@
     "check-lint": "lint [0-9]*.js",
     "test": "mocha --timeout 540000 tests/unit/*.test.js",
     "dev": "nodemon --exec babel-node --presets @babel/preset-env",
-    "api": "node --trace-warnings server.js",
     "demon": "nodemon server.js",
     "sequelize:init": "npx sequelize-cli init",
     "sequelize:migrate": "npx sequelize-cli db:migrate",
@@ -29,7 +28,8 @@
     "deploy": "pm2 start server.js",
     "stop": "pm2 stop server.js",
     "monitor": "pm2 monitor",
-    "save": "pm2 save"
+    "save": "pm2 save",
+    "render:prod": "npm run sequelize:migrate && pm2 reload server.js --update-env --name 'my-node-app' || pm2 start server.js --name 'my-node-app' --update-env"
   },
   "dependencies": {
     "cors": "^2.8.5",
