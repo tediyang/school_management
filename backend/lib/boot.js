@@ -28,7 +28,6 @@ const startServer = (app) => {
 const doCleanUps = async () => {
   const { Storage } = await getStorage();
   await Storage.close_connection();
-  logger.info('Database connection closed', new Date().getTime());
 };
 
 const gracefullyShutdown = async (app) => {
